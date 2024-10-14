@@ -20,7 +20,7 @@ const Aboutus = () => {
     
     <section className='flex-col flex md:flex-row md:mx-32'>
           <div>
-          <img src={fruit} alt="Description" className='w-[600px] md:h-[600px] md:pr-8 mt-1 md:m-0 ' />
+          <img src={fruit} alt="Description" className='w-[600px] md:h-[500px] md:pr-8 mt-1 md:m-0 ' />
           </div>
           <div className='m-4 md:m-0 md:w-1/2 md:pt-24  '>
             <h1 className='text-3xl font-bold'>Welcome to Vegefoods an eCommerce website</h1>
