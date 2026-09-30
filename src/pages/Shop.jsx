@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import fruit from '../assets/strawberry (1).jpg';
 import Itemlist from './Items';
 
 const Shop = () => {
@@ -14,7 +13,7 @@ const Shop = () => {
         {Itemlist.map((item) => (
           <article key={item.id} className="group overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl">
             <div className="relative overflow-hidden bg-gray-100">
-              <img src={fruit} alt={item.pname} loading="lazy" className="h-52 w-full object-cover transition duration-500 group-hover:scale-105" />
+              <img src={item.itemImg1} alt={item.pname} loading="lazy" className="h-52 w-full object-cover transition duration-500 group-hover:scale-105" />
               <span className="absolute left-3 top-3 rounded-full bg-green-600 px-3 py-1 text-xs font-bold text-white">{item.discount} off</span>
             </div>
             <div className="p-5 text-center">
