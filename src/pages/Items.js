@@ -5,7 +5,7 @@ const Itemlist = [
     {
       id:1,
       pname:"Gourmet Truffle Burger ",
-      itemImg1: {fruit2},
+      itemImg1: fruit2,
       price: "$15.99",
       priceSlash:"$17",
       discount:"6%",
@@ -14,7 +14,7 @@ const Itemlist = [
     {
       id:2,
       pname:"Avocado Toast Delight",
-      itemImg1:"{fruit2}",
+      itemImg1: fruit2,
       price: "$8.5",
       priceSlash:"$10",
       discount:"15%",
@@ -23,7 +23,7 @@ const Itemlist = [
     {
       id:3,
       pname:"Margherita Pizza",
-      itemImg1: {fruit2},
+      itemImg1: fruit2,
       price: "$12.9",
       priceSlash:"$15",
       discount:"14%",
@@ -32,7 +32,7 @@ const Itemlist = [
     {
       id:4,
       pname:"Spicy Tuna Sushi Roll ",
-      itemImg1: {fruit2},
+      itemImg1: fruit2,
       price: "$10.92",
       priceSlash:"$12",
       discount:"9%",
@@ -41,7 +41,7 @@ const Itemlist = [
     {
       id:5,
       pname:"Quinoa & Kale Salad ",
-      itemImg1: {fruit2},
+      itemImg1: fruit2,
       price: "$9.9",
       priceSlash:"$10",
       discount:"1%",
@@ -50,7 +50,7 @@ const Itemlist = [
     {
       id:6,
       pname:"Chicken Tikka Masala",
-      itemImg1: {fruit2},
+      itemImg1: fruit2,
       price: "$13.5",
       priceSlash:"$15",
       discount:"10%",
@@ -59,7 +59,7 @@ const Itemlist = [
     {
       id:7,
       pname:"Shrimp Scampi Pasta",
-      itemImg1: {fruit2},
+      itemImg1: fruit2,
       price: "$14.9",
       priceSlash:"$15",
       discount:"1%",
@@ -68,7 +68,7 @@ const Itemlist = [
     {
       id:8,
       pname:"Chocolate Lava Cake ",
-      itemImg1: {Fruit3},
+      itemImg1: Fruit3,
       price: "$7",
       priceSlash:"$10",
       discount:"30%",
