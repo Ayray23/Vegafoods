@@ -1,55 +1,34 @@
-import { IoMdCart, IoMdMenu, IoMdClose } from "react-icons/io";
-import { FaPhone } from "react-icons/fa6";
-import { FaLocationArrow } from "react-icons/fa6";
-import { Link, NavLink } from "react-router-dom";
 import { useState } from "react";
+import { IoMdCart, IoMdMenu, IoMdClose } from "react-icons/io";
+import { FaPhone, FaLocationArrow } from "react-icons/fa6";
+import { Link, NavLink } from "react-router-dom";
+
 const Header = () => {
-  const [menuOpen, setMenuOpen] = useState(false)
+  const [menuOpen, setMenuOpen] = useState(false);
+  const closeMenu = () => setMenuOpen(false);
+
   return (
-    <div>
-      <div className="bg-green-600 text-white flex md:flex-row justify-evenly flex-col p-4">
-        <h2 className="flex gap-2 items-center">
-          <FaPhone/>
-        + 1235 2355 98
-        </h2>
-        <h2 className="flex gap-2 items-center">
-        <FaLocationArrow />
-        youremail@email.com
-        </h2>
-        <h2>
-        3-5 Business days delivery & Free Returns
-        </h2>
+    <header>
+      <div className="bg-green-600 px-4 py-3 text-sm text-white flex flex-col items-center justify-between gap-2 md:flex-row md:px-8">
+        <span className="flex items-center gap-2"><FaPhone /> + 1235 2355 98</span>
+        <span className="flex items-center gap-2"><FaLocationArrow /> youremail@email.com</span>
+        <span>3-5 Business days delivery &amp; Free Returns</span>
       </div>
-
-      <nav className="relative flex justify-between items-center text-xl p-4 md:p-6">
-        <Link to ='/'>
-        <h1 className="text-green-600 text-2xl "> Vegefoods</h1>
-        </Link>
-       
-        <button className="md:hidden text-2xl text-green-700 order-first" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">{menuOpen ? <IoMdClose /> : <IoMdMenu />}</button>
-        <ul className={`${menuOpen ? "flex" : "hidden"} md:flex absolute md:static top-full left-0 right-0 bg-white md:bg-transparent flex-col md:flex-row gap-4 p-5 md:p-0 mr-0 md:mr-8 text-green-700 shadow md:shadow-none z-50`}
-          <NavLink to='/' onClick={() => setMenuOpen(false)}>
-          <li>Home</li>
-          </NavLink>
-
-          <NavLink to='/Shop' onClick={() => setMenuOpen(false)}>
-          <li> Shop</li>
-          </NavLink>
-          <NavLink to='/Aboutus' onClick={() => setMenuOpen(false)}>
-            <li>About</li>
-          </NavLink>
-          <NavLink to='/Blog' onClick={() => setMenuOpen(false)}>
-          <li>Blog</li>
-          </NavLink>
-
-          <div className="flex ml-4 items-center ">
-          <IoMdCart/>
-          [0]
-          </div>
+      <nav className="relative z-40 flex items-center justify-between bg-white px-4 py-4 shadow-sm md:px-8">
+        <Link to="/" onClick={closeMenu} className="text-2xl font-extrabold tracking-tight text-green-700">Vegefoods<span className="text-yellow-500">.</span></Link>
+        <button type="button" className="text-3xl text-green-700 md:hidden" onClick={() => setMenuOpen((open) => !open)} aria-label={menuOpen ? "Close navigation" : "Open navigation"} aria-expanded={menuOpen}>
+          {menuOpen ? <IoMdClose /> : <IoMdMenu />}
+        </button>
+        <ul className={`${menuOpen ? "flex" : "hidden"} absolute left-0 right-0 top-full flex-col gap-5 bg-white px-6 py-5 text-base font-semibold text-gray-700 shadow-lg md:static md:flex md:flex-row md:items-center md:gap-8 md:bg-transparent md:p-0 md:shadow-none`}>
+          <li><NavLink to="/" onClick={closeMenu}>Home</NavLink></li>
+          <li><NavLink to="/Shop" onClick={closeMenu}>Shop</NavLink></li>
+          <li><NavLink to="/Aboutus" onClick={closeMenu}>About</NavLink></li>
+          <li><NavLink to="/Contact" onClick={closeMenu}>Contact</NavLink></li>
+          <li><Link to="/Login" onClick={closeMenu} className="flex items-center gap-2"><IoMdCart /> Cart <span className="text-xs text-gray-500">(0)</span></Link></li>
         </ul>
       </nav>
-    </div>
-  )
-}
+    </header>
+  );
+};
 
-export default Header
+export default Header;
