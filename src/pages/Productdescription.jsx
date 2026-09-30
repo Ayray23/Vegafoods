@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import Itemlist from './Items'
-import pasta from '../assets/spaghetti.jpg'
 
 const Productdescription = () => {
   const { id } = useParams()
@@ -22,7 +21,7 @@ const Productdescription = () => {
     <main className="mx-auto max-w-6xl px-4 py-10 md:px-8">
       <div className="grid gap-8 md:grid-cols-2 md:items-center">
         <div className="overflow-hidden rounded-3xl bg-gray-100">
-          <img className="h-72 w-full object-cover sm:h-96" src={pasta} alt={item.pname} />
+          <img className="h-72 w-full object-cover sm:h-96" src={item.itemImg1} alt={item.pname} />
         </div>
         <section>
           <p className="text-sm font-bold uppercase tracking-widest text-green-700">Fresh selection</p>
