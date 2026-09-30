@@ -18,7 +18,7 @@ const Shop = () => {
         <div>
 
         </div>
-          <section className='md:grid md:grid-cols-4 md:gap-4 ml-8 mb-8'>
+          <section className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-4 md:px-8 mb-12'>
 
             {
               Itemlist.map((item, index) =>
